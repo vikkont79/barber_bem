@@ -3,16 +3,37 @@
   flex-direction: column;
   background-color: #242424;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    background-color: #000000;
+  }
 }
 
 .page-header__logo {
-  height: 85px;
+  block-size: 85px;
+  text-align: center;
+
   @media (min-width: @tablet-width) {
     order: 2;
-    height: 400px;
+    block-size: 400px;
+    background-color: #000000;
+    background-image: url("../../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -9px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 648px;
+    block-size: 648px;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+}
+
+.page-header__logo img {
+  inline-size: 226px;
+  block-size: 85px;
+
+  @media (min-width: @desktop-width) {
+    margin-block-start: 57px;
   }
 }

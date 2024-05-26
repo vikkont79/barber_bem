@@ -40,6 +40,17 @@ img {
   background-color: #F8F5fF;
   color: #000000;
 }
+.slider__item {
+  display: none;
+}
+@media (min-width: 768px) {
+  .slider__item {
+    display: block;
+  }
+}
+.slider__item--current {
+  display: block;
+}
 .page-header {
   display: flex;
   flex-direction: column;
@@ -613,22 +624,43 @@ stats__item:nth-child(1) {
   background-color: #242424;
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .advantages__wrapper {
+    inline-size: 570px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages__wrapper {
+    inline-size: 960px;
+  }
+}
 .advantages__list {
   text-align: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+@media (min-width: 1200px) {
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .advantages__title {
   margin: 0;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
 }
 .advantages__description {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 27px;
+}
+@media (min-width: 1200px) {
+  .advantages__description {
+    padding-inline: 45px;
+  }
 }
 .advantages__toggles {
   text-align: center;
@@ -638,23 +670,47 @@ stats__item:nth-child(1) {
   color: #000000;
 }
 .news__wrapper {
+  position: relative;
   text-align: center;
   border: 1px #E5DDD5 solid;
 }
 .news__title {
   margin: 0;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .news__title {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .news__title {
+    margin-inline-start: 69px;
+  }
 }
 .news__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+@media (min-width: 768px) {
+  .news__list {
+    display: flex;
+    gap: 46px;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .news__list {
+    overflow-x: auto;
+  }
+}
 .news__link {
   display: flex;
+  gap: 21px;
   text-decoration: none;
   color: inherit;
 }
@@ -668,65 +724,145 @@ stats__item:nth-child(1) {
   color: #FFFFFF;
 }
 .news__day {
-  font-size: 30px;
+  font-size: 28px;
 }
 .news__text {
   margin: 0;
-  font-size: 18px;
+  text-align: left;
+  font-size: 16px;
   line-height: 27px;
+}
+@media (min-width: 768px) {
+  .news__text {
+    inline-size: 203px;
+  }
 }
 .news__to-all {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 27px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
+}
+@media (min-width: 768px) {
+  .news__to-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 .reviews {
   background-color: #F8F5F2;
   color: #000000;
 }
 .reviews__wrapper {
+  position: relative;
   text-align: center;
 }
 .reviews__title {
   margin: 0;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .reviews__title {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews__title {
+    margin-inline-start: 69px;
+  }
+}
 .reviews__write {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 27px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
 }
-.reviews__avatar {
+@media (min-width: 768px) {
+  .reviews__write {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.reviews__item {
+  margin: 0;
+  border: 1px #E5DDD5 solid;
+}
+@media (min-width: 768px) {
+  .reviews__item {
+    display: none;
+  }
+}
+.reviews__item--current {
   display: block;
+}
+.reviews__avatar {
+  display: inline-block;
   inline-size: 50px;
   block-size: 50px;
 }
+.reviews__author-info {
+  display: inline-block;
+}
 .reviews__author-name {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 27px;
 }
 .reviews__text {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 27px;
+}
+@media (min-width: 768px) {
+  .reviews__text {
+    max-inline-size: 345px;
+  }
 }
 .page-footer {
   background-color: #292929;
   color: #FFFFFF;
 }
 .page-footer__wrapper {
+  position: relative;
   text-align: center;
   border: 1px #4A4A4A;
+}
+@media (min-width: 1200px) {
+  .page-footer__wrapper {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__contacts {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer__contacts {
+    margin-inline-end: 90px;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__copyright {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer__copyright {
+    position: relative;
+    margin-inline-start: auto;
+  }
 }
 .contacts {
   font-size: 18px;

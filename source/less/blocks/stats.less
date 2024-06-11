@@ -1,6 +1,10 @@
 .stats {
   background-color: @darkgrey;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    background-color: #353535;
+  }
 }
 
 .stats__wrapper {
@@ -18,6 +22,7 @@
     margin-block-end: @stats-shift;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding-block-end: 47px;
   }
 }
 

@@ -9,6 +9,7 @@
 
 .stats__wrapper {
   @media (min-width: @tablet-width) {
+    inline-size: 640px;
     @stats-shift: -179px;
     padding-block: 0;
     position: relative;
@@ -17,6 +18,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    inline-size: 960px;
     @stats-shift: -149px;
     top: @stats-shift;
     margin-block-end: @stats-shift;
@@ -53,7 +55,7 @@
   margin-block-end: 13px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1;
   font-weight: bold;
 
@@ -71,8 +73,8 @@
 
 .stats__intro {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.35;
+  font-size: 20px;
+  line-height: 27px;
   text-align: center;
 
   @media (max-width: @mobile-width-only) {
@@ -96,7 +98,7 @@
 .stats__legend {
   margin: 0;
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
 }
 
@@ -163,7 +165,7 @@ stats__item:nth-child(1) {
 
 .stats__number {
   font-weight: bold;
-  font-size: 38px;
+  font-size: 40px;
   line-height: 1;
 
   sup {
@@ -175,7 +177,7 @@ stats__item:nth-child(1) {
 
   @media (min-width: @tablet-width) {
     margin-block-end: 12px;
-    font-size: 62px;
+    font-size: 72px;
   }
 }
 

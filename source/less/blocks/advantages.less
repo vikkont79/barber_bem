@@ -1,15 +1,29 @@
 .advantages {
   background-color: #242424;
+  background-image: url(../../img/angle.svg);
+  background-repeat: no-repeat;
+  background-size: 320px 34px;
+  background-position: bottom;
   color: #FFFFFF;
 
   @media (min-width: @tablet-width) {
+    background-image: url(../../img/angle-div.svg);
+    background-size: 1280px 68px;
     background-color: #353535;
   }
 }
 
 .advantages__wrapper {
+margin-block-end: 34px;
+
   @media (min-width: @tablet-width) {
-    inline-size: 570px;
+    margin-block-end: 42px;
+    padding-inline: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-block-end: 64px;
+    padding-inline: 0;
   }
 }
 

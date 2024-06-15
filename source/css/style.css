@@ -28,6 +28,19 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 13px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px #E5DDD5 solid;
+  color: inherit;
+}
 .page {
   block-size: 100%;
   font-size: 18px;
@@ -631,16 +644,32 @@ stats__item:nth-child(1) {
 }
 .advantages {
   background-color: #242424;
+  background-image: url(../../img/angle.svg);
+  background-repeat: no-repeat;
+  background-size: 320px 34px;
+  background-position: bottom;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .advantages {
+    background-image: url(../../img/angle-div.svg);
+    background-size: 1280px 68px;
     background-color: #353535;
   }
 }
+.advantages__wrapper {
+  margin-block-end: 34px;
+}
 @media (min-width: 768px) {
   .advantages__wrapper {
-    inline-size: 570px;
+    margin-block-end: 42px;
+    padding-inline: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages__wrapper {
+    margin-block-end: 64px;
+    padding-inline: 0;
   }
 }
 .advantages__list {
@@ -730,16 +759,37 @@ stats__item:nth-child(1) {
   }
 }
 .news {
+  position: relative;
   background-color: #F8F5F2;
   color: #000000;
 }
+.news::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  inline-size: 100%;
+  block-size: 2px;
+  background-color: #E5DDD5;
+}
+@media (max-width: 767px) {
+  .news::after {
+    inline-size: 280px;
+    left: 20px;
+  }
+}
 .news__wrapper {
   position: relative;
+  padding-block: 0 28px;
   text-align: center;
-  border: 1px #E5DDD5 solid;
+}
+@media (min-width: 768px) {
+  .news__wrapper {
+    padding-block: 0;
+  }
 }
 .news__title {
-  margin: 0;
+  margin-block: 0 27px;
   font-size: 30px;
   line-height: 1;
   font-weight: 700;
@@ -757,9 +807,11 @@ stats__item:nth-child(1) {
   }
 }
 .news__list {
+  max-block-size: 288px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow-y: hidden;
 }
 @media (min-width: 768px) {
   .news__list {
@@ -773,26 +825,48 @@ stats__item:nth-child(1) {
     overflow-x: auto;
   }
 }
-.news__link {
+.news__item {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   gap: 21px;
-  text-decoration: none;
-  color: inherit;
+  margin-block-end: 34px;
+}
+@media (max-width: 767px) {
+  .news__item::after {
+    position: absolute;
+    content: "";
+    bottom: -18px;
+    inline-size: 280px;
+    block-size: 2px;
+    background-color: #E5DDD5;
+  }
 }
 .news__date {
+  position: relative;
+  top: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   inline-size: 50px;
   block-size: 60px;
-  text-align: center;
+  margin-inline: auto;
   font-size: 16px;
   line-height: 30px;
-  background-color: #000000;
+  text-transform: uppercase;
+  background-image: url(../../img/date-back.svg);
+  background-size: 50px 60px;
+  background-position: top 5px;
   color: #FFFFFF;
 }
 .news__day {
+  position: relative;
+  top: 5px;
   font-size: 30px;
-  font-weight: 700;
 }
 .news__text {
+  inline-size: 210px;
   margin: 0;
   text-align: left;
   font-size: 18px;
@@ -804,16 +878,13 @@ stats__item:nth-child(1) {
   }
 }
 .news__to-all {
-  margin: 0;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: inherit;
+  inline-size: 280px;
+  margin-block-start: 17px;
 }
 @media (min-width: 768px) {
   .news__to-all {
+    inline-size: 160px;
+    margin-block-start: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -856,15 +927,6 @@ stats__item:nth-child(1) {
     margin-inline-start: 69px;
   }
 }
-.reviews__write {
-  margin: 0;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: inherit;
-}
 @media (max-width: 767px) {
   .reviews__write {
     display: none;
@@ -872,6 +934,7 @@ stats__item:nth-child(1) {
 }
 @media (min-width: 768px) {
   .reviews__write {
+    inline-size: 160px;
     position: absolute;
     top: 0;
     right: 0;
